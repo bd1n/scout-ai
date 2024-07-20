@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import './styles/App.css'
 import SearchBar from './components/SearchBar'
 import Header from './components/Header'
+import { getPlayerByName } from './backendTest';
 
 function App() {
 

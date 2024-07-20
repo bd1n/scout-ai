@@ -7,7 +7,8 @@ function Header(){
             <Toolbar>
                 <h2>Scout AI</h2>
                 <div className='buttons'>
-                    <Button sx={{backgroundColor: 'white', color: 'black', paddingRight: '20px'}}>Log In</Button>
+    margin: 10px;
+                    <Button sx={{backgroundColor: 'white', color: 'black', margin: '10px'}}>Log In</Button>
                     <Button sx={{backgroundColor: 'black', color: 'white'}}>Sign Up</Button>
                 </div>
             </Toolbar>
