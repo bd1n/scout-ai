@@ -1,0 +1,21 @@
+.playerPage{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.playerHeadshot{
+    max-width: 500px;
+    max-height: 300px;
+}
+
+.leftColumn,.rightColumn{
+    width: 20vw;
+    height: 90vh;
+}
+
+.rightColumn{
+    position: absolute;
+    right: 0;
+}
