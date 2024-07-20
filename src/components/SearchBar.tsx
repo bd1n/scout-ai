@@ -4,14 +4,23 @@ import { useState } from 'react';
 import { Button } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import { getPlayerByName } from '../backendTest';
+import { useNavigate } from 'react-router-dom';
 
 function SearchBar() {
     const [queryText, setQueryText] = useState('');
-
-    const handleSubmit = async () =>{
-        await getPlayerByName(queryText);
-        //Set loading animation
+    const navigate = useNavigate();
+    
+    const handleSubmit = async () => {
+        try{
+            const queryResult = await getPlayerByName(queryText);
+            navigate(`/playerpage/${queryResult.name.replace(/\s/g, '')}`)
+        }
+        catch(e){
+            console.log(e)
+            alert('Player does not exist')
+        }
         setQueryText('');
+
     }
 
     return(

@@ -1,16 +1,16 @@
 import './styles/App.css'
-import SearchBar from './components/SearchBar'
-import Header from './components/Header'
-import { getPlayerByName } from './backendTest';
+import { Route, Routes } from 'react-router';
+import Home from './pages/Home';
+import PlayerPage from './pages/PlayerPage';
 
 function App() {
 
   return (
-    <>
-      <Header/>
-      <div className='home-background'>
-        <SearchBar/>
-      </div>
+    <>  
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/playerpage/:name" element={<PlayerPage/>}/>
+      </Routes>
     </>
   )
 }

@@ -1,26 +1,33 @@
 export interface InjuryStatus{
     description: string,
-    injuryDate: string,
+    injDate: string,
     designation: string,
 }
 
-export interface RushingStats{
-    rushAttempts: number,
-    rushTouchdowns: number,
-    rushYards: number,
+interface RushingStats{
+    rushYds: number,
+    carries: number,
+    rushTd: number,
 }
 
-export interface PassingStats{
+interface PassingStats{
     passAttempts: number,
-    passCompletions: number,
-    passYards: number,
-    passTouchdowns: number,
-    interceptionsThrown: number
+    passTD: number,
+    passYds: number,
+    int: number,
+    passCompletions: number
 }
 
-export interface OffensiveStats{
+interface ReceivingStats{
+    receptions: number,
+    recTD: number,
+    targets: number,
+    recYds: number
+}
+interface OffensiveStats{
     passingStats: PassingStats,
-    rushingStats: RushingStats
+    rushingStats: RushingStats,
+    receivingStats: ReceivingStats
 }
 
 export interface PlayerObject{
@@ -29,8 +36,11 @@ export interface PlayerObject{
     position: string,
     jerseyNumber: number,
     headshotURL: string,
+    gamesPlayed: number
     injuryStatus: InjuryStatus,
     freeAgentStatus: boolean,
-    teamCityAbbreviation: string,
-    offensiveStats: OffensiveStats
+    teamAbbreviation: string,
+    rushingStats: RushingStats,
+    passingStats: PassingStats,
+    receivingStats: ReceivingStats
 }
