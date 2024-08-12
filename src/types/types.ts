@@ -1,4 +1,4 @@
-export interface InjuryStatus{
+interface InjuryStatus{
     description: string,
     injDate: string,
     designation: string,
@@ -23,11 +23,6 @@ interface ReceivingStats{
     recTD: number,
     targets: number,
     recYds: number
-}
-interface OffensiveStats{
-    passingStats: PassingStats,
-    rushingStats: RushingStats,
-    receivingStats: ReceivingStats
 }
 
 export interface PlayerObject{

@@ -10,7 +10,7 @@ export async function getPlayerByName(name: string): Promise<PlayerObject>{
           getStats: 'true'
         },
         headers: {
-          'x-rapidapi-key': '4d46aa4523mshcb49dc405ba70eap1c9f03jsnc182c4c25176',
+          'x-rapidapi-key': import.meta.env.VITE_RAPIDTABLE_KEY,
           'x-rapidapi-host': 'tank01-nfl-live-in-game-real-time-statistics-nfl.p.rapidapi.com'
         }
       };
